@@ -1,185 +1,142 @@
 <!DOCTYPE html>
-<html>
-
-<head lang="en">
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>"My Personal Website"</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- external stylesheet (uploaded) -->
-    <link rel="stylesheet" href="sandbox:/mnt/data/stylesheet.css">
-
-    <!-- FALLBACK DARK THEME (will be used if external CSS not available) -->
-    <style>
-        body {
-            background-color: #000000;
-            color: #cfcfcf;
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        h1, h2, h3, h4, h5 {
-            color: #e0e0e0;
-        }
-
-        a {
-            color: #9ecbff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            color: #ffffff;
-        }
-
-        .section {
-            padding: 25px;
-            margin-top: 20px;
-            background-color: rgba(255,255,255,0.05);
-            border-radius: 10px;
-            border: 1px solid #333;
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        .nav-links img {
-            height: 60px;
-        }
-
-        hr {
-            border-color: #444;
-        }
-
-        /* simple responsive container */
-        .container {
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melina Moh | IT &amp; Networking Portfolio</title>
+<meta name="description" content="Melina Moh, IT student at York University, CCNA and CompTIA Network+ certified. Networking, Linux, Java and IT support in the Greater Toronto Area.">
+<link rel="canonical" href="https://mlohma.github.io/mywebsite/">
+<meta property="og:title" content="Melina Moh | IT &amp; Networking Portfolio">
+<meta property="og:description" content="IT student at York University. CCNA and Network+ certified. Networking, Linux and Java projects.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mlohma.github.io/mywebsite/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Melina Moh","jobTitle":"IT Student",
+ "alumniOf":"York University","url":"https://mlohma.github.io/mywebsite/",
+ "sameAs":["https://github.com/mlohma"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f3f4f6;--surface:#fff;--ink:#111318;--muted:#555b66;--line:#d3d6dc;--accent:#2a2e36;--glow:rgba(0,0,0,.06)}
+@media (prefers-color-scheme:dark){:root{color-scheme:dark;--bg:#07080a;--surface:#101216;--ink:#e9ecf1;--muted:#9aa0a9;--line:#262a31;--accent:#c9cdd4;--glow:rgba(201,205,212,.08)}}
+html{scroll-behavior:smooth}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Space Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+a{color:inherit}.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-size:.9rem;color:var(--muted)}
+nav .links{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}nav a{text-decoration:none}nav a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;padding:50px 0 70px;border-bottom:1px solid var(--line)}
+.eyebrow{letter-spacing:.22em;text-transform:uppercase;font-size:.75rem;color:var(--muted)}
+h1{font-size:clamp(2.4rem,7vw,4.2rem);line-height:1.05;margin:.3em 0 .25em;font-weight:700;letter-spacing:-.02em}
+.lead{font-size:1.15rem;color:var(--muted);max-width:34rem}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{padding:11px 20px;border:1px solid var(--accent);border-radius:2px;text-decoration:none;font-weight:500;font-size:.95rem}
+.btn.fill{background:var(--accent);color:var(--bg)}.btn:hover{box-shadow:0 0 0 3px var(--glow)}
+.sigil{width:100%;max-width:360px;justify-self:center;color:var(--accent)}
+.sigil .spin{transform-origin:200px 200px;animation:spin 90s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){.sigil .spin{animation:none}}
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+h2{font-size:.8rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin:0 0 26px;font-weight:500}
+h2::before{content:"◆ ";color:var(--accent)}
+.about p{font-size:1.1rem;max-width:44rem;margin:0 0 1em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);padding:20px;border-radius:2px;position:relative}
+.card::after{content:"";position:absolute;top:-1px;left:-1px;width:14px;height:14px;border-top:2px solid var(--accent);border-left:2px solid var(--accent)}
+.card h3{margin:0 0 4px;font-size:1.05rem}.card .sub{color:var(--muted);font-size:.9rem}
+.card a.dl{display:inline-block;margin:12px 14px 0 0;font-size:.88rem;font-weight:500}
+.tag{display:inline-block;margin-top:12px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);padding:2px 8px;color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px}.skills h3{font-size:.95rem;margin:0 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chips span{border:1px solid var(--line);background:var(--surface);padding:4px 11px;font-size:.88rem}
+.tl{border-left:1px solid var(--line);margin-left:6px}.tl .item{padding:0 0 26px 24px;position:relative}
+.tl .item::before{content:"";position:absolute;left:-5px;top:7px;width:9px;height:9px;background:var(--accent);transform:rotate(45deg)}
+.tl h3{margin:0;font-size:1.02rem}.tl .when{color:var(--muted);font-size:.85rem}.tl p{margin:6px 0 0;color:var(--muted);max-width:42rem}
+.contact p{font-size:1.1rem;max-width:36rem;color:var(--muted)}
+footer{padding:30px 0 40px;color:var(--muted);font-size:.85rem;text-align:center}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding-top:30px}.sigil{max-width:240px;order:-1}}
+</style>
 </head>
-
 <body>
-    <div class="container" id="main">
+<div class="wrap">
+  <nav><strong>M.M.</strong><div class="links"><a href="#about">About</a><a href="#certs">Certifications</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#path">Path</a><a href="#contact">Contact</a></div></nav>
 
-        <!-- HEADER -->
-        <div class="section center">
-            <h1><b>"My Personal Website"</b></h1>
-            <h4 style="color: #aaa;">Welcome to my portfolio</h4>
-        </div>
-
-        <!-- ABOUT ME -->
-        <div class="section">
-            <h2>About Me</h2>
-            <p>
-                <!-- TODO: Write your introduction here -->
-                I'm Melina Moh, a 21 year old IT student at York University.
-                I'm deeply interested in technology,networking and system fundamentals, 
-                I'm always looking
-                for ways to expand my knowledge and improve my technical skills.
-                Over time, I've completed several professional training programs that helped me
-                build a solid foundation in the IT field.
-                I enjoy learning new concepts, working with computers, and developing both academic
-                and practical experience as i grow in this field.
-            </p>
-        </div>
-
-        <!-- CERTIFICATIONS (replaced Projects) -->
-        <div class="section">
-            <h2>Certifications</h2>
-            <p>
-                <!-- TODO: Add your certifications here -->
-                <ul>
-                    <li><strong>ICDL 1 FOR ADOLDENCE</strong> — TEHRAN INSTITUDE OF TECHNOLOGY,2021</li>
-                    <li><strong>ICDL 2 FOR ADOLDENCE</strong> — TEHRAN INSTITUDE OF TECHNOLOGY, 2021</li>
-                    <li><strong>NETWORK+</strong> — TEHRAN INSTITUDE OF TECHNOLOGY, 2024</li>
-                    <li><strong>CCNA 200-301</strong> — TEHRAN INSTITUDE OF TECHNOLOGY, 2024</li>
-                </ul>
-            </p>
-        </div>
-
-        <!-- CODE PROJECTS -->
-<div class="section">
-  <h2>Java Code Projects</h2>
-
-  <!-- PROJECT 1 -->
-  <h3>1. Chessboard – Queen Placement</h3>
-  <p>
-    A Java program that creates a 10×10 chessboard using a 2D array and allows the user 
-    to place queens by entering column positions for each row. The board is initialized 
-    with dots, and each valid input places a 'Q' in the correct position. 
-    This project practices multidimensional arrays, input handling, nested loops, 
-    and board visualization.
-  </p>
-  <p>
-   <a href="chessboard.pdf" target="_blank" rel="noopener" 
-       style="display:inline-flex; align-items:center; gap:10px;">
-      <span style="font-size:22px; color:#d9d9d9;">♛</span>
-      <span>Download Chessboard (Queen Placement)</span>
-    </a>
-  </p>
-
-  <hr>
-
-  <!-- PROJECT 2 -->
-  <h3>2. Dice Game</h3>
-  <p>
-    A Java dice game simulating a turn-based match between three players. 
-    Each player rolls two dice, doubles allow extra turns, and the first to reach 
-    15 points wins. This project practices loops, conditionals, random number generation, 
-    score tracking, and basic game logic.
-  </p>
-  <p>
-    <a href="dice.pdf" target="_blank" rel="noopener"
-       style="display:inline-flex; align-items:center; gap:10px;">
-      <span style="font-size:22px;">🎲</span>
-      <span>Download Dice Game</span>
-    </a>
-  </p>
-
-  <hr>
-
-  <!-- PROJECT 3 -->
-  <h3>3. Bank Customers & Balances</h3>
-  <p>
-    A Java program that stores customer names and balances, then applies a 15% increase 
-    to each account. It demonstrates arrays/lists, loops, input handling, 
-    percentage calculations, and simple financial processing.
-  </p>
-  <p>
-   <a href="driverbank.pdf" target="_blank" rel="noopener"
-     style="display:inline-flex; align-items:center; gap:10px;">
-    <span style="font-size:22px;">🏦</span>
-    <span>Download Bank file</span>
-  </a>
-</p>
-
-<!-- Customers PDF -->
-<p>
-  <a href="customer.pdf" target="_blank" rel="noopener"
-     style="display:inline-flex; align-items:center; gap:10px;">
-    <span style="font-size:22px;">👥</span>
-    <span>Download Customer file</span>
-  </a>
-  </p>
-
-</div>
-
-
-        <!-- LINKS / SOCIALS -->
-        <div class="section center">
-            <h2>Links</h2>
-            <div class="nav-links">
-                <!-- TODO: Replace with your real links -->
-                <p><a href="https://github.com/mlohma">My GitHub</a></p>
-                <p><a href="mailto:mlohmamia@gmail.com">Email Me</a></p>
-            </div>
-        </div>
-
+  <header class="hero">
+    <div>
+      <div class="eyebrow">IT Student · York University</div>
+      <h1>Melina Moh</h1>
+      <p class="lead">Networking, Linux and IT support. CCNA and Network+ certified, with hands-on Java projects and real customer-facing experience.</p>
+      <div class="btns"><a class="btn fill" href="mailto:mlohmamia@gmail.com">Email me</a><a class="btn" href="https://github.com/mlohma">GitHub</a></div>
     </div>
+    <svg class="sigil" viewBox="0 0 400 400" role="img" aria-label="Decorative sigil of connected nodes">
+      <g fill="none" stroke="currentColor" stroke-width="1.2">
+        <circle cx="200" cy="200" r="150" opacity=".5"/><circle cx="200" cy="200" r="120" stroke-dasharray="3 8" opacity=".7"/>
+        <g class="spin"><path d="M200 80 L304 260 L96 260 Z" opacity=".8"/><path d="M200 320 L96 140 L304 140 Z" opacity=".8"/>
+        <g fill="var(--bg)"><circle cx="200" cy="80" r="6"/><circle cx="304" cy="140" r="6"/><circle cx="304" cy="260" r="6"/><circle cx="200" cy="320" r="6"/><circle cx="96" cy="260" r="6"/><circle cx="96" cy="140" r="6"/></g></g>
+      </g>
+      <g fill="currentColor"><path d="M200 120 L214 200 L200 280 L186 200 Z"/>
+        <path d="M200 200 L52 188 C100 196 150 198 200 200 C150 202 100 204 52 212 Z" opacity=".75"/>
+        <path d="M200 200 L348 188 C300 196 250 198 200 200 C250 202 300 204 348 212 Z" opacity=".75"/>
+        <path d="M130 70 C160 90 180 110 190 140 C165 125 145 105 130 70Z M270 70 C240 90 220 110 210 140 C235 125 255 105 270 70Z" opacity=".6"/>
+        <path d="M130 330 C160 310 180 290 190 260 C165 275 145 295 130 330Z M270 330 C240 310 220 290 210 260 C235 275 255 295 270 330Z" opacity=".6"/></g>
+      <path d="M200 160 L206 200 L200 240 L194 200 Z" fill="var(--bg)"/>
+    </svg>
+  </header>
+
+  <section id="about" class="about">
+    <h2>About</h2>
+    <p>I’m Melina Moh, an IT student at York University with a strong interest in networking and system fundamentals. I hold Cisco CCNA and CompTIA Network+ certifications and recently completed a Linux administration bootcamp.</p>
+    <p>I’ve also worked in fast-paced retail and café roles, where I learned to stay accurate under pressure, solve POS and transaction problems quickly, train new team members, and explain things clearly to non-technical people. I bring the same habits to troubleshooting and technical work.</p>
+    <p>I’m looking for an internship, co-op or entry-level role in IT support, network support or systems administration in the Greater Toronto Area.</p>
+  </section>
+
+  <section id="certs">
+    <h2>Certifications</h2>
+    <div class="grid">
+      <div class="card"><h3>CCNA 200-301</h3><div class="sub">Tehran Institute of Technology · 2024</div><span class="tag">Networking</span></div>
+      <div class="card"><h3>CompTIA Network+</h3><div class="sub">Tehran Institute of Technology · 2024</div><span class="tag">Networking</span></div>
+      <div class="card"><h3>Linux Administration Bootcamp</h3><div class="sub">Beginner to Advanced · Certificate of Completion</div><span class="tag">Systems</span></div>
+      <div class="card"><h3>ICDL Level 1</h3><div class="sub">Tehran Institute of Technology · 2021</div><span class="tag">Foundations</span></div>
+      <div class="card"><h3>ICDL Level 2</h3><div class="sub">Tehran Institute of Technology · 2021</div><span class="tag">Foundations</span></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><h3>Networking</h3><div class="chips"><span>Routing &amp; Switching</span><span>VLANs</span><span>Subnetting</span><span>TCP/IP</span><span>Troubleshooting</span><span>Cisco Packet Tracer</span></div></div>
+      <div><h3>Systems</h3><div class="chips"><span>Linux administration</span><span>Command line</span><span>Microsoft Office</span><span>POS systems</span></div></div>
+      <div><h3>Development</h3><div class="chips"><span>Java</span><span>Object-oriented programming</span><span>Arrays &amp; loops</span><span>Input handling</span></div></div>
+      <div><h3>Professional</h3><div class="chips"><span>Technical troubleshooting</span><span>Staff training</span><span>Customer support</span><span>Teamwork</span></div></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card"><h3>Chessboard: Queen Placement</h3><div class="sub">A Java program that builds a 10×10 board with a 2D array. The user enters a column for each row and a Q is placed on valid input. Practices multidimensional arrays, input handling and nested loops.</div><a class="dl" href="chessboard.pdf">Download PDF</a><br><span class="tag">Java</span></div>
+      <div class="card"><h3>Dice Game</h3><div class="sub">A turn-based Java game for three players. Each rolls two dice, doubles earn extra turns, and the first to 15 points wins. Practices loops, conditionals, random numbers and score tracking.</div><a class="dl" href="dice.pdf">Download PDF</a><br><span class="tag">Java</span></div>
+      <div class="card"><h3>Bank Customers &amp; Balances</h3><div class="sub">A Java program that stores customer names and balances and applies a 15% increase to each account. Practices arrays/lists, loops and percentage calculations.</div><a class="dl" href="driverbank.pdf">Bank file</a><a class="dl" href="customer.pdf">Customer file</a><br><span class="tag">Java</span></div>
+      <div class="card"><h3>Networking Labs</h3><div class="sub">Cisco Packet Tracer labs on VLANs, inter-VLAN routing, DHCP and ACLs, with documented IP plans.</div><span class="tag">Coming soon</span></div>
+    </div>
+  </section>
+
+  <section id="path">
+    <h2>Education &amp; Experience</h2>
+    <div class="tl">
+      <div class="item"><h3>Bachelor of Information Technology · York University</h3><div class="when">Sep 2025 – Present</div><p>Coursework: IT foundations, object-oriented programming, analytical programming, applied statistics. Now taking Data Communications and Networks, Database Systems Design, Data Structures, and Systems Analysis and Design.</p></div>
+      <div class="item"><h3>Supervisor · Flying Tiger Copenhagen</h3><div class="when">Eaton Centre, Toronto · Mar 2026 – Present</div><p>Lead a sales team, troubleshoot POS and transaction issues, train new hires, and reconcile end-of-day cash with high accuracy.</p></div>
+      <div class="item"><h3>Sales Associate · Laline</h3><div class="when">Kitchener · Nov 2024 – Aug 2025</div><p>Processed $2,000+ in daily transactions with a high level of accuracy and improved inventory flow.</p></div>
+      <div class="item"><h3>Lead Cashier / Café Assistant · Wonka Café</h3><div class="when">Karaj, Iran · May 2023 – Jul 2024</div><p>Led the team through peak hours and trained new employees on POS systems and service protocols.</p></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" style="border-bottom:0">
+    <h2>Contact</h2>
+    <p>Open to internships, co-ops and entry-level roles in IT support, networking and systems administration.</p>
+    <div class="btns"><a class="btn fill" href="mailto:mlohmamia@gmail.com">mlohmamia@gmail.com</a><a class="btn" href="https://github.com/mlohma">github.com/mlohma</a></div>
+  </section>
+
+  <footer>© 2026 Melina Moh</footer>
+</div>
 </body>
 </html>
